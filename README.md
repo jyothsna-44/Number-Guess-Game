@@ -5,15 +5,6 @@ A classic number guessing game reimagined as a full-stack web application. This 
 
 **This project demonstrates a clear separation of concerns, with a robust backend handling logic and a creative frontend, built with modern web technologies, handling all presentation.**
 
----
-
-### **Live Demo Screenshot**
-
-*A beautiful screenshot is the best way to showcase your work! Replace this link with a real screenshot of your application running.*
-
-![Serene Grove Guess Screenshot](https://i.imgur.com/your-screenshot-link-here.png)
-
----
 
 ### **Features**
 
@@ -47,3 +38,4 @@ To get a local copy up and running, follow these simple steps.
 - **JDK 1.8** or newer installed.
 - **Apache Maven** installed.
 - Your favorite Java IDE (e.g., Eclipse, IntelliJ IDEA).
+
