@@ -1,0 +1,37 @@
+<!-- src/main/resources/public/index.html (COMPLETE REPLACEMENT) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Serene Grove Guess</title>
+
+    <!-- Nature-Themed Google Fonts (Lora and Lato) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for a subtle icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- Our Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Serene Grove Guess</h1>
+        <p>The forest holds a secret number between 1 and 100. Quiet your mind and listen...</p>
+        
+        <div class="input-area">
+            <input type="number" id="guessInput" placeholder="Whisper your guess...">
+            <button id="guessButton">Listen</button>
+        </div>
+        
+        <p id="feedbackText">The forest is quiet, awaiting your whisper.</p>
+        <p class="tries-counter">Whispers Sent: <span id="triesCount">0</span></p>
+        
+        <button id="restartButton" style="display:none;">Listen for a New Secret</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

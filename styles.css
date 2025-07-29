@@ -1,0 +1,143 @@
+/* src/main/resources/public/styles.css (COMPLETE REPLACEMENT) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+    overflow: hidden; /* Hide scrollbars for the immersive effect */
+    
+    /* The living forest background */
+    background: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Ken Burns effect to make the background feel alive */
+    animation: zoom-in-zoom-out 25s ease-in-out infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+    0% { transform: scale(1, 1); }
+    50% { transform: scale(1.1, 1.1); }
+    100% { transform: scale(1, 1); }
+}
+
+/* --- Game Container - The "Parchment Paper" Panel --- */
+.game-container {
+    max-width: 550px;
+    padding: 40px;
+    
+    /* The semi-transparent parchment effect */
+    background-color: rgba(253, 246, 227, 0.85); /* A creamy, parchment color */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    border-radius: 15px;
+    border: 2px solid #8c6b4f; /* A soft, woody brown border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: #3a2e24; /* A dark brown for text */
+    text-align: center;
+}
+
+/* --- Typography - Elegant and Earthy --- */
+h1 {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #2a502a; /* A deep forest green */
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #5d493a;
+}
+
+/* --- Form Elements - Natural and Soft --- */
+.input-area {
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    width: 220px;
+    padding: 12px;
+    border: 1px solid #c9b7a8;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    color: #3a2e24;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]::placeholder {
+    color: #8c6b4f;
+    font-style: italic;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #556b2f; /* A darker, olive green */
+    box-shadow: 0 0 10px rgba(85, 107, 47, 0.3);
+}
+
+button {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #556b2f; /* Dark Olive Green */
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 0 #3a4820; /* Creates a 3D effect */
+}
+
+button:hover {
+    background-color: #6b8e23; /* A lighter olive */
+}
+
+button:active {
+    transform: translateY(2px); /* Button press effect */
+    box-shadow: 0 2px 0 #3a4820;
+}
+
+#restartButton {
+    background-color: #8c6b4f;
+    box-shadow: 0 4px 0 #5d493a;
+}
+
+#restartButton:hover {
+    background-color: #a07d5e;
+}
+
+/* --- Feedback Styling --- */
+#feedbackText {
+    font-size: 1.3em;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 600;
+    min-height: 30px;
+    margin-top: 20px;
+    transition: color 0.5s ease;
+}
+.feedback-high { color: #c0392b; } /* A poppy red */
+.feedback-low { color: #2980b9; } /* A river blue */
+.feedback-correct { color: #27ae60; } /* A lush green */
+
+.tries-counter {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
